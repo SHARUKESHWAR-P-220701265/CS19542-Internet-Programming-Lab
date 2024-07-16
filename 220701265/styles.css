@@ -1,11 +1,73 @@
 @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 *{
     box-sizing: border-box;
-    margin: 0;
+    margin: 1px;
     padding: 0;
 }
+body{
+    background-color:rgb(255, 154, 53);
+    border: 1px solid black;
+}
 #master{
-    display:grid;
+    display:flex;
+    justify-content: center;
+    background-color:bisque;
+    height: 90vh;
+}
+#leftCol{
+    background-color: darkslategray;
+    width: 20%;
+}
+.left1{
+    background-color: rgb(219, 147, 147);
+}
+.left2{
+    background-color: rgb(143, 72, 72);
+}
+#centerCol{
+    background-color: rgb(169, 255, 169);
+    width: 50%;
+}
+#rightCol{
+    width:30%;
+    background-color: darkslategray;
+}
+#intro{
+    background-color: azure;
+}
+#h1{
+    text-align: center;
+}
+#desc{
+    background-color: rgb(97, 254, 254);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#desc ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#desc ul li{
+    float:left;
+    padding: 10px;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: aliceblue;
+    height: 78vh;
+}
+#main div{
+    border: 2px solid black;
+    width: 40%;
+    margin: 10px;
+}
+#main div h2{
+    text-align: center;
 }
 #image{ 
     width:400px;
@@ -14,4 +76,7 @@
     object-fit: cover;
     object-position: top;
 
+}
+footer{
+    text-align: center;
 }
