@@ -1,11 +1,12 @@
 @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 *{
     box-sizing: border-box;
     margin:10px;
     padding: 0px;
     text-decoration: none;
-    list-style-type: none;
     border-radius: 8px;
+    font-family: Montserrat;
 }
 #master{
     display:flex;
@@ -15,6 +16,12 @@
 #leftCol{
     background-color: beige;
     width: 15%;
+}
+.left h2{
+    padding:10px
+}
+#leftCol li{
+    color: white;
 }
 .left1{
     background-color: rgb(219, 147, 147);
@@ -27,10 +34,6 @@
     flex-direction: column;
     background-color: beige;
     width: 65%;
-}
-#rightCol{
-    width:20%;
-    background-color: darkslategray;
 }
 #intro{
     background-color: azure;
@@ -61,12 +64,23 @@
     justify-content: space-between;
 }
 #main div{
-    border: 2px solid black;
+    border: 1px solid black;
     width: 40%;
     margin: 10px;
+    transition: 0.4s;
+}
+#main div:hover{
+    box-shadow: 10px 10px 1px;
 }
 #main div h2{
     text-align: center;
+}
+#rightCol{
+    width:20%;
+    background-color: darkslategray;
+}
+#rightCol p{
+    color: white;
 }
 #imageFrame{
     display:flex;
@@ -81,7 +95,9 @@
     clip-path: circle();
     object-fit: cover;
     object-position: top;
-
+}
+#contact{
+    color: white;
 }
 footer{
     text-align: center;
