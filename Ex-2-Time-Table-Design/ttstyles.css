@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+table,tr{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}
+#secRow th{
+    height: 4vh;
+}
+#imgHeader{
+    background-image: url(reclogo1.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%;
+    width: 5%;
+}
+img{
+    width: 100%;
+}
+#recHeader{
+    padding-right: 10%;
+}
+.thiRow th:nth-child(1){
+    height: 5vh;
+    text-align: center;
+    padding-right: 10%;
+    border: 1px solid black;
+}
+.thiRow th:nth-child(2){
+    height: 5vh;
+    text-align: center;
+    padding-left: 10%;
+}
+.fifRow th{
+    width: 10%;
+    height: 5vh;
+    border: 1px solid black;
+}
+.teachers th{
+    border: 1px solid black;
+}
+.days td, .teachers td{
+    font-weight: bold;
+    border: 1px solid black;
+}
+.days td:nth-child(1){
+    text-align: start;
+    padding-left: 1%;
+}
+.teachers td:nth-child(2), .teachers td:nth-child(4){
+    text-align: start;
+    padding-left: 1%;
+}
+.room{
+    color: red;
+}
+#break{
+    transform: rotate(-90deg);
+}
+.fifRow th, .days td, .teachers td{
+    padding: 0.5%;
+}
+.empty{
+    height: 5vh;
+}
+.empty-last{
+    height:5vh;
+    border: none;
+}
+.sign td{
+    border-top: hidden;
+    font-weight: bold;
+    padding-bottom: 0.5%;
+}
+.footer{
+    padding: 1%;
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
