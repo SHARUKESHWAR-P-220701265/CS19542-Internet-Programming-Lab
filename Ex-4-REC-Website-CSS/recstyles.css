@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {  
+  background-color: #FFFFFF;
+
+}
+
+/* Style the tab */
+.tab {
+  margin: 1%;
+  float: left;
+  border: 1px solid #ccc;
+  background-color: rgb(182, 252, 233);
+  width: 15%;
+  height: 80vh;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: rgb(52, 40, 105);
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: white;
+  background-color: purple;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+  color: rgb(52, 40, 105);
+}
+
+/* Style the tab content */
+.tabcontent {
+  margin: 1%;
+  float: left;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border: none;
+  height: 80vh;
+}
+table,tr, th, td{
+  padding: 1%;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+} 
+th{
+  font-size:20px;
+}
+td{
+  font-weight: normal;
+}
+table{
+  width: 100%;
+}
+#head{
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 100;
+  width:50%;
+  line-height: 1;
+  margin-left: 25%;
+  background: linear-gradient(90deg, #230b39, #692b94, #230b39);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  padding: 0%;
+}
+#Addr{
+  margin-top: 1%;
+  text-align: end;
+  color:#321fbe;
+  padding-right: 15%;
+}
+.tabcontent h2{
+  font-size:40px;
+  color:#321fbe;
+  padding-bottom: 3%;
+}
+.tabcontent p{
+  text-align: justify;
+  font-size: 17px;
+  color:rgb(40, 40, 143);
+}
+#CSE h3{
+  font-size:25px;
+  color:#321fbe;
+}
+#News h2{
+  margin-top: 1%;
+  font-size:25px;
+  padding-bottom: 1%;
+}
+#News{
+  color:#321fbe;
+}

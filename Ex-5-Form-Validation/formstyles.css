@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.form{
+    width: 800px;
+    background: purple;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+}
+.form h1{
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: 13px, 0;
+}
+.input-box .input-field.full {
+    width: 100%;
+}
+.input-box .input-field.final {
+    width: 32%;
+}
+.input-box .input-field input, .input-field select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px hidden black;
+}
+.actionBtn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actionBtn input {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;  /* Adjust font size */
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: purple;
+    cursor: pointer;
+}
+
+.actionBtn input:hover {
+    background: #ddd;  /* Add hover effect */
+}
+
+#declare{
+    margin-top: 20px;
+}
