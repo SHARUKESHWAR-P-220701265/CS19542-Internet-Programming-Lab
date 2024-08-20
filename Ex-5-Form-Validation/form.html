@@ -3,23 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formstyles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Course Registration Form</title>
 </head>
 <body>
-    <div id="heading">
-        <h1>Course Registration Form</h1>
-    </div>
-    <div id="form">
+    <div class="form">
         <form action="#" method="post">
-            <input type="text" placeholder="Student Name">
-            <input type="number" placeholder="Roll Number">
-            <label for="gender">Gender</label>
-            <select name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <input type="text" placeholder="Student Name">
+            <h1>Course Registration Form</h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Student Name" name="sname" >
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Roll Number" name="roll" >
+                    <i class='bx bxs-id-card'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <select id="gen" name="gender" >
+                        <option value="" disabled selected hidden>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <i id="gen-icon" class='bx bx-male-sign'></i>
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Year" name="year" >
+                    <i class='bx bxs-calendar'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Department" name="dept" >
+                    <i class='bx bxs-graduation'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Section" name="sec" >
+                    <i class='bx bxs-institution'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field full">
+                    <input id="email" type="email" placeholder="Email" >
+                    <i class='bx bxs-envelope'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field full">
+                    <input id="addr" type="text" placeholder="Address" >
+                    <i class='bx bxs-home'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field final">
+                    <input type="text" placeholder="Country" name="country" >
+                    <i class='bx bxs-map-alt'></i>
+                </div>
+                <div class="input-field final">
+                    <input type="text" placeholder="City" name="city" >
+                    <i class='bx bxs-map'></i>  
+                </div>
+                <div class="input-field final">
+                    <input type="number" placeholder="Pincode" name="pin" >
+                    <i class='bx bxs-pin'></i>
+                </div>
+            </div>
+            <label><input id="declare" type="checkbox" >I hereby declare that the above information provided is true
+            and correct.</label>
+            <div class="actionBtn">
+                <input type="submit" value="Submit" onsubmit="submitForm()">
+                <input type="reset" value="Clear" onsubmit="">
+            </div>
         </form>
+        <div id="confirmationMessage" style="display:none; margin-top: 20px; color: rgb(255, 255, 255);">
+            Your form has been successfully submitted!
+        </div>
     </div>
+    <script src="formScript.js"></script>
 </body>
 </html>
