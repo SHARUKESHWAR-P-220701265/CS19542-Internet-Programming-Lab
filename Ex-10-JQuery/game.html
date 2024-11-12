@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JQuery Game</title>
+  <style>
+    /* CSS styles for the game */
+    .bubble {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      font-size: 30px;
+      text-align: center;
+      line-height: 60px;
+    }
+
+    #start {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #score {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      display: none; /* Initially hide the score */
+    }
+  </style>
+</head>
+<body>
+  <button id="start">Start</button>
+  <div id="gameArea">
+    <div id="score">0</div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    // Get screen dimensions
+    var width = screen.width - 100;
+    var height = screen.height - 200;
+
+    // Generate random alphabet and color
+    function generateBubble() {
+      var randomCharCode = Math.floor(Math.random() * 26) + 65; 
+      //cannot directly specify range here so i am doing 26 * math.random (26 alphabets) +65 because starting
+      //floor also is used because random can return floating point values also
+      var randomCharacter = String.fromCharCode(randomCharCode);
+      //max value for a 24 bit is 16777215 and sice colour hex code is 6bytes*8bits=24
+      //and 16 is used because it is the base of hexadecimal
+      var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+      // Create bubble element
+      var bubble = $('<div class="bubble"></div>');
+      bubble.text(randomCharacter);
+      bubble.css({
+        backgroundColor: randomColor,
+        left: Math.random() * (width - 50) + 'px',
+        top: Math.random() * (height - 50) + 'px'
+      });
+
+      // Add bubble to game area and update score
+      $('#gameArea').append(bubble);
+    }
+
+    // Update score
+    function updateScore() {
+      var currentScore = parseInt($('#score').text());
+      currentScore++;
+      $('#score').text(currentScore);
+    }
+
+    // Generate initial bubbles and start game
+    function startGame() {
+      // Hide start button and show game area and score
+      $('#start').hide();
+      $('#gameArea').show();
+      $('#score').show();
+
+      // Generate initial bubbles
+      for (var i = 0; i < 10; i++) {
+        generateBubble();
+      }
+    }
+
+    // Handle keydown event
+    $(document).keydown(function(event) {
+      var keyCode = event.keyCode;
+      $('.bubble').each(function() {
+        if ($(this).text() === String.fromCharCode(keyCode)) {
+          $(this).remove();
+          updateScore();
+          generateBubble();
+        }
+      });
+    });
+
+    // Start game when start button is clicked
+    $('#start').click(startGame);
+  </script>
+</body>
+</html>

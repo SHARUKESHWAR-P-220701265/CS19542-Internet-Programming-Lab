@@ -1,0 +1,20 @@
+<html>
+<head><title>AJAX - Retrieving a Text File</title></head>
+<body>
+<h1>The XMLHttpRequest Object</h1>
+<button onclick="loadXMLDoc()">Change Content</button>
+<p>Click the button to change the content.</p>
+<p id="file"></p>
+<script>
+function loadXMLDoc(){
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange=function(){
+		if(this.readyState==4 && this.status==200)
+			document.getElementById("file").innerHTML=this.responseText;
+		}
+	xhttp.open("GET","recajax.txt");
+	xhttp.send();
+}
+</script>
+</body>
+</html>

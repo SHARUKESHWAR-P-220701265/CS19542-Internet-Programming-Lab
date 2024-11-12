@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    /* flex-direction: row; */
+    /* background-color: aqua; */
+    justify-content: center;
+}
+.container>div {
+    margin: 10px;
+}

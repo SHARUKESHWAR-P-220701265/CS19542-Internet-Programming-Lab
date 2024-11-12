@@ -1,0 +1,9 @@
+<hr>
+<h1><u>AJAX</u></h1>
+<br>
+<p>AJAX is not a programming Language.</p>
+<br>
+<p>AJAX is a technique for accessing web servers from a webpage</p>
+<br>
+<p>AJAX stands for Synchronous JavaScript and XML</p>
+<hr>

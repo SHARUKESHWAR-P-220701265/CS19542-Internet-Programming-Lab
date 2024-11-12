@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login/register</title>
+  <style>
+        label,input{
+            padding: 10px;
+            margin-bottom:10px;
+            border: 1px solid #ccc;
+            border-radius:3px;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div><a routerLink="/reg-com" routerLinkActive="active" ariaCurrentWhenActive="page">REGISTRATION</a></div>
+    <div>|</div>
+    <div><a routerLink="/log-com" routerLinkActive="active" ariaCurrentWhenActive="page">LOGIN</a></div>
+  </div>
+  <hr>
+  <router-outlet></router-outlet>
+</body>
+</html>
